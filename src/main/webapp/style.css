@@ -1,0 +1,432 @@
+body {
+    font-family: sans-serif;
+    background-color: #cfe0f9;
+    color: #1a4b8c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.screen {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(26, 75, 140, 0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* Estilos de la pantalla de Login */
+#login-screen {
+    text-align: center;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cfe0f9;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+#login-form button {
+    flex: 1;
+    padding: 10px;
+    background-color: #1a4b8c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#login-form button:hover {
+    background-color: #3a6ea5;
+}
+
+#register-btn {
+    background-color: #3a6ea5 !important;
+}
+
+#register-btn:hover {
+    background-color: #1a4b8c !important;
+}
+
+/* Estilos de la pantalla de Registro */
+#register-screen {
+    text-align: center;
+}
+
+#register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cfe0f9;
+    border-radius: 5px;
+}
+
+#register-form button {
+    flex: 1;
+    padding: 10px;
+    background-color: #3a6ea5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#register-form button:hover {
+    background-color: #1a4b8c;
+}
+
+#back-to-login-btn {
+    background-color: #1a4b8c !important;
+}
+
+#back-to-login-btn:hover {
+    background-color: #3a6ea5 !important;
+}
+
+/* Estilos del menú principal */
+#main-menu-screen header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #cfe0f9;
+    padding-bottom: 10px;
+}
+
+#main-menu-screen nav {
+    display: flex;
+}
+
+.menu-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.menu-item.active {
+    color: #1a4b8c;
+    border-bottom: 2px solid #1a4b8c;
+}
+
+#new-group-btn {
+    background-color: #1a4b8c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#new-group-btn:hover {
+    background-color: #3a6ea5;
+}
+
+/* Estilos para el menú desplegable */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #1a4b8c;
+    border-radius: 3px;
+}
+
+.dropdown-content {
+    position: absolute;
+    right: 0;
+    background-color: #cfe0f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(26, 75, 140, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #1a4b8c;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #3a6ea5;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Estilos para el selector de idioma */
+.language-selector {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.language-menu {
+    padding: 12px 16px;
+    border-bottom: 1px solid #cfe0f9;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-label {
+    font-size: 0.9rem;
+    color: #1a4b8c;
+}
+
+.lang-btn {
+    background-color: #fff;
+    border: 1px solid #cfe0f9;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    color: #1a4b8c;
+}
+
+.lang-btn:hover {
+    background-color: #cfe0f9;
+}
+
+.lang-btn.active {
+    background-color: #1a4b8c;
+    color: white;
+    border-color: #1a4b8c;
+}
+
+#groups-list, #requests-list {
+    list-style: none;
+    padding: 0;
+}
+
+#groups-list li, #requests-list li {
+    background-color: #cfe0f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #1a4b8c;
+}
+
+/* Estilos de las otras pantallas */
+#group-detail-screen header, #new-group-form-screen header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#add-expense-btn, #back-to-main-btn, #back-from-form-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-expense-btn {
+    background-color: #1a4b8c;
+    color: white;
+    margin-top: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#add-expense-btn:hover {
+    background-color: #3a6ea5;
+}
+
+#back-to-main-btn, #back-from-form-btn {
+    background-color: #3a6ea5;
+    color: white;
+}
+
+#back-to-main-btn:hover, #back-from-form-btn:hover {
+    background-color: #1a4b8c;
+}
+
+/* Formulario de Nuevo Grupo */
+#new-group-form button {
+    margin-top: 10px;
+    background-color: #1a4b8c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#new-group-form button:hover {
+    background-color: #3a6ea5;
+}
+
+#add-participant-btn, #add-expense-input-btn {
+    background-color: #3a6ea5;
+}
+
+#add-participant-btn:hover, #add-expense-input-btn:hover {
+    background-color: #1a4b8c;
+}
+
+#new-group-form input, #new-group-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cfe0f9;
+    border-radius: 5px;
+    color: #1a4b8c;
+}
+
+.participant-item, .expense-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+/* Estilos para el formulario de añadir gasto */
+#add-expense-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cfe0f9;
+    border-radius: 5px;
+    color: #1a4b8c;
+}
+
+#add-expense-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a4b8c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#add-expense-form button:hover {
+    background-color: #3a6ea5;
+}
+
+#back-from-expense-form-btn {
+    background-color: #3a6ea5;
+    color: white;
+}
+
+#back-from-expense-form-btn:hover {
+    background-color: #1a4b8c;
+}
+
+/* Estilos para los pagos */
+.debt-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+.debt-item p {
+    margin: 0 0 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment-confirmed {
+    color: #28a745;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.payment-pending {
+    color: #ffc107;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.mark-paid-btn, .confirm-payment-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-left: auto;
+}
+
+.mark-paid-btn {
+    background-color: #3a6ea5;
+    color: white;
+}
+
+.mark-paid-btn:hover {
+    background-color: #1a4b8c;
+}
+
+.confirm-payment-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.confirm-payment-btn:hover {
+    background-color: #218838;
+}

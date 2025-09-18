@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodTricount</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="login-screen" class="screen active">
+    <h1>GoodTricount</h1>
+    <p data-translate="app_slogan">"Lo mismo que otras aplicaciones, pero bien"</p>
+    <form id="login-form">
+        <input type="text" id="username" placeholder="Nombre de usuario" data-translate="username" required>
+        <input type="password" id="password" placeholder="Contraseña" data-translate="password" required>
+        <input type="email" id="email" placeholder="Correo electrónico" data-translate="email" required>
+        <div class="button-container">
+            <button type="submit" data-translate="login">Iniciar Sesión</button>
+            <button type="button" id="register-btn" data-translate="register">Registrarse</button>
+        </div>
+    </form>
+    <div class="language-selector">
+        <button id="lang-es" class="lang-btn active">ES</button>
+        <button id="lang-en" class="lang-btn">EN</button>
+    </div>
+</div>
+
+<div id="register-screen" class="screen hidden">
+    <h1>GoodTricount</h1>
+    <p data-translate="app_slogan">"Lo mismo que otras aplicaciones, pero bien"</p>
+    <form id="register-form">
+        <input type="text" id="reg-username" placeholder="Nombre de usuario" data-translate="username" required>
+        <input type="password" id="reg-password" placeholder="Contraseña" data-translate="password" required>
+        <input type="email" id="reg-email" placeholder="Correo electrónico" data-translate="email" required>
+        <div class="button-container">
+            <button type="submit" data-translate="register">Registrarse</button>
+            <button type="button" id="back-to-login-btn" data-translate="back_to_login">Volver al Login</button>
+        </div>
+    </form>
+    <div class="language-selector">
+        <button id="lang-es-reg" class="lang-btn active">ES</button>
+        <button id="lang-en-reg" class="lang-btn">EN</button>
+    </div>
+</div>
+
+<div id="main-menu-screen" class="screen hidden">
+    <header>
+        <nav>
+            <div class="menu-item active" id="groups-btn" data-translate="groups">Grupos</div>
+            <div class="menu-item" id="requests-btn" data-translate="requests">Solicitudes</div>
+        </nav>
+        <div class="header-buttons">
+            <button id="new-group-btn" data-translate="new_group">+ Nuevo grupo</button>
+            <div class="dropdown">
+                <button id="menu-btn" class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div id="dropdown-content" class="dropdown-content hidden">
+                    <div class="language-menu">
+                        <span class="language-label" data-translate="language">Idioma:</span>
+                        <button id="lang-es-menu" class="lang-btn active">ES</button>
+                        <button id="lang-en-menu" class="lang-btn">EN</button>
+                    </div>
+                    <a href="#" id="logout-btn" data-translate="logout">Desconectarte</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="groups-section">
+            <h2 data-translate="my_groups">Mis Grupos</h2>
+            <ul id="groups-list">
+            </ul>
+        </section>
+
+        <section id="requests-section" class="hidden">
+            <h2 data-translate="pending_requests">Solicitudes Pendientes</h2>
+            <ul id="requests-list">
+            </ul>
+        </section>
+    </main>
+</div>
+
+<div id="group-detail-screen" class="screen hidden">
+    <header>
+        <h2 id="group-title"></h2>
+        <button id="back-to-main-btn" data-translate="back">Volver</button>
+    </header>
+    <div id="group-content">
+    </div>
+    <button id="add-expense-btn" class="hidden" data-translate="add_expense">Añadir Gasto</button>
+</div>
+
+<div id="new-group-form-screen" class="screen hidden">
+    <header>
+        <h2 data-translate="create_new_group">Crear Nuevo Grupo</h2>
+        <button id="back-from-form-btn" data-translate="cancel">Cancelar</button>
+    </header>
+    <form id="new-group-form">
+        <input type="text" id="group-name" placeholder="Nombre del grupo" data-translate="group_name" required>
+        <div id="participants-container">
+            <p data-translate="participants">Participantes:</p>
+        </div>
+        <button type="button" id="add-participant-btn" data-translate="add_participant">Añadir participante</button>
+        <div id="expenses-container">
+            <p data-translate="expenses">Gastos:</p>
+        </div>
+        <button type="button" id="add-expense-input-btn" data-translate="add_expense_btn">Añadir gasto</button>
+        <button type="submit" data-translate="create_group">Crear Grupo</button>
+    </form>
+</div>
+
+<div id="add-expense-form-screen" class="screen hidden">
+    <header>
+        <h2 data-translate="add_expense_title">Añadir Gasto</h2>
+        <button id="back-from-expense-form-btn" data-translate="cancel">Cancelar</button>
+    </header>
+    <form id="add-expense-form">
+        <div id="new-expense-container">
+            <div class="expense-item">
+                <input type="text" id="expense-payer" placeholder="Quien paga (usuario)" data-translate="payer" required>
+                <input type="number" id="expense-amount" placeholder="Cantidad (€)" data-translate="amount" required step="0.01">
+                <input type="text" id="expense-description" placeholder="Descripción" data-translate="description">
+            </div>
+        </div>
+        <button type="submit" data-translate="add_expense">Añadir Gasto</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
